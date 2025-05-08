@@ -8,6 +8,7 @@
 #include <QCoreApplication>
 #include <QString>
 #include <QListWidgetItem>
+#include <QFileSystemWatcher>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -27,7 +28,10 @@ private slots:
     void on_searchButton_clicked();
     void on_fileItem_clicked(QListWidgetItem *item);
     void load_text_from_file(const QString &filePath);
+
 private:
     Ui::MainWindow *ui;
+    QFileSystemWatcher *folderWatcher;
+    void update_file_list();  // reuse for both startup and refresh
 };
 #endif // MAINWINDOW_H

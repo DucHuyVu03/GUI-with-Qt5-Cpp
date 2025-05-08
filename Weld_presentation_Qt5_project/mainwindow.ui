@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Weld results station</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <property name="tabletTracking">
     <bool>false</bool>
@@ -20,7 +23,7 @@
    <widget class="QLabel" name="weldResultHeaderLabel">
     <property name="geometry">
      <rect>
-      <x>560</x>
+      <x>660</x>
       <y>10</y>
       <width>151</width>
       <height>31</height>
@@ -30,6 +33,9 @@
      <font>
       <pointsize>20</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: black;</string>
     </property>
     <property name="text">
      <string>Weld Result</string>
@@ -41,21 +47,29 @@
       <x>1550</x>
       <y>10</y>
       <width>301</width>
-      <height>41</height>
+      <height>61</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
     <property name="text">
-     <string>Type Here to search...</string>
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+    <property name="placeholderText">
+     <string>Nhập MSSV để và ấn search...</string>
     </property>
    </widget>
    <widget class="QPushButton" name="searchButton">
     <property name="geometry">
      <rect>
       <x>1550</x>
-      <y>60</y>
+      <y>80</y>
       <width>301</width>
       <height>41</height>
      </rect>
@@ -68,7 +82,7 @@
     <property name="geometry">
      <rect>
       <x>1550</x>
-      <y>110</y>
+      <y>130</y>
       <width>301</width>
       <height>851</height>
      </rect>
@@ -84,7 +98,7 @@
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>40</y>
+      <y>70</y>
       <width>1246</width>
       <height>364</height>
      </rect>
@@ -104,14 +118,17 @@
      <rect>
       <x>130</x>
       <y>490</y>
-      <width>1000</width>
-      <height>300</height>
+      <width>1081</width>
+      <height>301</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <pointsize>20</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: black;</string>
     </property>
     <property name="text">
      <string>Class and comment here</string>
@@ -121,17 +138,6 @@
     </property>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1920</width>
-     <height>22</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

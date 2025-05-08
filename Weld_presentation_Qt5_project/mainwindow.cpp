@@ -6,13 +6,23 @@ QString getDataFolderPath() {
     QDir dir = QFileInfo(sourcePath).dir();  // Get directory of mainwindow.cpp
     return dir.filePath("data");             // Append "data" folder
 }
-
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    // Change background
+    QString sourcePath = QString(__FILE__); // full path to mainwindow.cpp
+    QFileInfo fileInfo(sourcePath);
+    QString sourceDir = fileInfo.absolutePath(); // path to the folder containing .cpp
 
+    QString backgroundPath = sourceDir + "/helpers/background1.jpg";
+    this->setStyleSheet(QString("QMainWindow {"
+                                "background-image: url(%1);"
+                                "background-repeat: no-repeat;"
+                                "background-position: center;"
+                                "}").arg(backgroundPath));
+    //========== Folder ================================
     //Get the "data" folder
     QString dataContainingFolder = getDataFolderPath();
     qDebug()  << dataContainingFolder;
@@ -34,6 +44,13 @@ MainWindow::MainWindow(QWidget *parent)
     for (const QFileInfo &file : fileList) {
         ui->weldImageList->addItem(file.fileName());
     }
+    //========================================================================
+
+    //======== Refresh timer ===================
+    folderWatcher = new QFileSystemWatcher(this);
+    QString dataPath = getDataFolderPath();
+    folderWatcher->addPath(dataPath);
+    //========================================================================
 
     //Connection
     connect(ui->weldImageList, &QListWidget::itemClicked,
@@ -41,8 +58,12 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(ui->searchButton, &QPushButton::clicked,
             this, &MainWindow::on_searchButton_clicked);
-}
 
+    connect(folderWatcher, &QFileSystemWatcher::directoryChanged,
+            this, &MainWindow::update_file_list);
+    //=== Start timer =====
+    update_file_list();
+}
 
 MainWindow::~MainWindow()
 {
@@ -104,4 +125,19 @@ void MainWindow::load_text_from_file(const QString &filePath) {
     file.close();
 
     ui->classNCommentLabel->setText(content);
+}
+
+void MainWindow::update_file_list() {
+    QString dataPath = getDataFolderPath();
+    QDir dir(dataPath);
+    QStringList nameFilters;
+    nameFilters << "*.jpg" << "*.JPG";
+
+    QFileInfoList allFiles = dir.entryInfoList(nameFilters, QDir::Files | QDir::NoDotAndDotDot);
+
+    ui->weldImageList->clear();
+
+    for (const QFileInfo &file : allFiles) {
+        ui->weldImageList->addItem(file.fileName());
+    }
 }
