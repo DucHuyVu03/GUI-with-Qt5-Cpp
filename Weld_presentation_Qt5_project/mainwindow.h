@@ -2,6 +2,12 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QDir>
+#include <QFileInfoList>
+#include <QMessageBox>
+#include <QCoreApplication>
+#include <QString>
+#include <QListWidgetItem>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -19,7 +25,8 @@ public:
 
 private slots:
     void on_searchButton_clicked();
-
+    void on_fileItem_clicked(QListWidgetItem *item);
+    void load_text_from_file(const QString &filePath);
 private:
     Ui::MainWindow *ui;
 };

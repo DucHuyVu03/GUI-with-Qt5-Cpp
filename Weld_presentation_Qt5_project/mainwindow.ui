@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Weld results station</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="tabletTracking">
@@ -20,11 +20,16 @@
    <widget class="QLabel" name="weldResultHeaderLabel">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>20</y>
-      <width>81</width>
+      <x>560</x>
+      <y>10</y>
+      <width>151</width>
       <height>31</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>Weld Result</string>
@@ -67,6 +72,52 @@
       <width>301</width>
       <height>851</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="weldImageLabel">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>40</y>
+      <width>1246</width>
+      <height>364</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Image here</string>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="classNCommentLabel">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>490</y>
+      <width>1000</width>
+      <height>300</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Class and comment here</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignJustify|Qt::AlignmentFlag::AlignVCenter</set>
     </property>
    </widget>
   </widget>
