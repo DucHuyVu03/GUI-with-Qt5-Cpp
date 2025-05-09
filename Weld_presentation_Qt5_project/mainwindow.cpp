@@ -34,7 +34,7 @@ MainWindow::MainWindow(QWidget *parent)
         qDebug() << "Data folder not exist!!!. Please create a folder name 'data'";
         return;
     }
-    //Get all the files==============
+    //==========Get all the files==============
     //Filter only the .jpg files
     QStringList imageFormatFilters;
     imageFormatFilters << "*.jpg" << "*.JPG";  // include both lowercase and uppercase
@@ -61,6 +61,12 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(folderWatcher, &QFileSystemWatcher::directoryChanged,
             this, &MainWindow::update_file_list);
+
+    // Center the window within available screen space
+    QScreen *screen = QGuiApplication::primaryScreen();
+    QRect availableGeometry = screen->availableGeometry();
+    move(availableGeometry.center() - this->rect().center());
+
     //=== Start timer =====
     update_file_list();
 }

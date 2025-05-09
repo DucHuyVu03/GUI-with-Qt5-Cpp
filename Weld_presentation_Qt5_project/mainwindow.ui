@@ -16,6 +16,9 @@
   <property name="styleSheet">
    <string notr="true"/>
   </property>
+  <property name="dockNestingEnabled">
+   <bool>true</bool>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <property name="tabletTracking">
     <bool>false</bool>
@@ -23,15 +26,16 @@
    <widget class="QLabel" name="weldResultHeaderLabel">
     <property name="geometry">
      <rect>
-      <x>660</x>
-      <y>10</y>
-      <width>151</width>
+      <x>630</x>
+      <y>20</y>
+      <width>241</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>20</pointsize>
+      <pointsize>30</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -44,9 +48,9 @@
    <widget class="QLineEdit" name="weldSearchTypeBox">
     <property name="geometry">
      <rect>
-      <x>1550</x>
-      <y>10</y>
-      <width>301</width>
+      <x>1440</x>
+      <y>70</y>
+      <width>341</width>
       <height>61</height>
      </rect>
     </property>
@@ -54,6 +58,12 @@
      <font>
       <pointsize>15</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 3px solid gray;
+border-radius: 8px;
+background-color: white;
+color: black;</string>
     </property>
     <property name="text">
      <string/>
@@ -68,11 +78,14 @@
    <widget class="QPushButton" name="searchButton">
     <property name="geometry">
      <rect>
-      <x>1550</x>
-      <y>80</y>
-      <width>301</width>
+      <x>1440</x>
+      <y>140</y>
+      <width>341</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Search</string>
@@ -81,10 +94,10 @@
    <widget class="QListWidget" name="weldImageList">
     <property name="geometry">
      <rect>
-      <x>1550</x>
-      <y>130</y>
-      <width>301</width>
-      <height>851</height>
+      <x>1440</x>
+      <y>190</y>
+      <width>341</width>
+      <height>751</height>
      </rect>
     </property>
     <property name="font">
@@ -92,6 +105,15 @@
       <pointsize>18</pointsize>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QListWidget {
+    border: 3px solid gray;
+    border-radius: 8px;
+    background-color: #ffffff;
+	color: black;
+}
+</string>
     </property>
    </widget>
    <widget class="QLabel" name="weldImageLabel">
@@ -102,6 +124,13 @@
       <width>1246</width>
       <height>364</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #cbc9cb;
+color: black;
+border: 3px solid gray;
+border-radius: 4px;
+padding: 0px;</string>
     </property>
     <property name="text">
      <string>Image here</string>
@@ -116,11 +145,17 @@
    <widget class="QLabel" name="classNCommentLabel">
     <property name="geometry">
      <rect>
-      <x>130</x>
+      <x>110</x>
       <y>490</y>
-      <width>1081</width>
-      <height>301</height>
+      <width>1251</width>
+      <height>451</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
     <property name="font">
      <font>
@@ -128,13 +163,20 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: black;</string>
+     <string notr="true">background: #cbc9cb;
+color: black;
+border: 3px solid gray;
+border-radius: 4px;
+padding: 0px;</string>
     </property>
     <property name="text">
      <string>Class and comment here</string>
     </property>
     <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignJustify|Qt::AlignmentFlag::AlignVCenter</set>
+     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
     </property>
    </widget>
   </widget>
