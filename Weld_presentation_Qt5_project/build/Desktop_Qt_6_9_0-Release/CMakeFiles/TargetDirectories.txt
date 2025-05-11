@@ -1,0 +1,8 @@
+/home/squanchiwini/Desktop/sandboxes/GUI-with-Qt5-Cpp/Weld_presentation_Qt5_project/build/Desktop_Qt_6_9_0-Release/CMakeFiles/Weld_presentation_Qt5_project.dir
+/home/squanchiwini/Desktop/sandboxes/GUI-with-Qt5-Cpp/Weld_presentation_Qt5_project/build/Desktop_Qt_6_9_0-Release/CMakeFiles/edit_cache.dir
+/home/squanchiwini/Desktop/sandboxes/GUI-with-Qt5-Cpp/Weld_presentation_Qt5_project/build/Desktop_Qt_6_9_0-Release/CMakeFiles/rebuild_cache.dir
+/home/squanchiwini/Desktop/sandboxes/GUI-with-Qt5-Cpp/Weld_presentation_Qt5_project/build/Desktop_Qt_6_9_0-Release/CMakeFiles/list_install_components.dir
+/home/squanchiwini/Desktop/sandboxes/GUI-with-Qt5-Cpp/Weld_presentation_Qt5_project/build/Desktop_Qt_6_9_0-Release/CMakeFiles/install.dir
+/home/squanchiwini/Desktop/sandboxes/GUI-with-Qt5-Cpp/Weld_presentation_Qt5_project/build/Desktop_Qt_6_9_0-Release/CMakeFiles/install/local.dir
+/home/squanchiwini/Desktop/sandboxes/GUI-with-Qt5-Cpp/Weld_presentation_Qt5_project/build/Desktop_Qt_6_9_0-Release/CMakeFiles/install/strip.dir
+/home/squanchiwini/Desktop/sandboxes/GUI-with-Qt5-Cpp/Weld_presentation_Qt5_project/build/Desktop_Qt_6_9_0-Release/CMakeFiles/Weld_presentation_Qt5_project_autogen.dir

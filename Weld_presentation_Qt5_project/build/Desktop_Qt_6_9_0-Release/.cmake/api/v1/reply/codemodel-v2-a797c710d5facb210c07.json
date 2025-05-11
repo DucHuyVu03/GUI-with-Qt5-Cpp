@@ -1,0 +1,70 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-198c54e92b7dbe18b4c8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Weld_presentation_Qt5_project",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Weld_presentation_Qt5_project::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Weld_presentation_Qt5_project-Release-04a366c2c0d0443e50ee.json",
+					"name" : "Weld_presentation_Qt5_project",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Weld_presentation_Qt5_project_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Weld_presentation_Qt5_project_autogen-Release-2c5ff8b8b672a11cb2b4.json",
+					"name" : "Weld_presentation_Qt5_project_autogen",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/squanchiwini/Desktop/sandboxes/GUI-with-Qt5-Cpp/Weld_presentation_Qt5_project/build/Desktop_Qt_6_9_0-Release",
+		"source" : "/home/squanchiwini/Desktop/sandboxes/GUI-with-Qt5-Cpp/Weld_presentation_Qt5_project"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

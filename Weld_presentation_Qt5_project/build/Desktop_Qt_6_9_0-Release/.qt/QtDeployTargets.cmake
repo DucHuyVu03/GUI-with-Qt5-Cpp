@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_Weld_presentation_Qt5_project_FILE /home/squanchiwini/Desktop/sandboxes/GUI-with-Qt5-Cpp/Weld_presentation_Qt5_project/build/Desktop_Qt_6_9_0-Release/Weld_presentation_Qt5_project)
+set(__QT_DEPLOY_TARGET_Weld_presentation_Qt5_project_TYPE EXECUTABLE)

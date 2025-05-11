@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+48b54f4bdf4da159d8133ff9e191b125 CMakeFiles/Weld_presentation_Qt5_project_autogen

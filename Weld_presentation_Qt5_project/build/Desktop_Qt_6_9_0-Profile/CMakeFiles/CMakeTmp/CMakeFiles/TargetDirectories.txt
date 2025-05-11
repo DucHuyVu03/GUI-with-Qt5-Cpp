@@ -1,0 +1,3 @@
+/home/squanchiwini/Desktop/sandboxes/GUI-with-Qt5-Cpp/Weld_presentation_Qt5_project/build/Desktop_Qt_6_9_0-Profile/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_dacf5.dir
+/home/squanchiwini/Desktop/sandboxes/GUI-with-Qt5-Cpp/Weld_presentation_Qt5_project/build/Desktop_Qt_6_9_0-Profile/CMakeFiles/CMakeTmp/CMakeFiles/edit_cache.dir
+/home/squanchiwini/Desktop/sandboxes/GUI-with-Qt5-Cpp/Weld_presentation_Qt5_project/build/Desktop_Qt_6_9_0-Profile/CMakeFiles/CMakeTmp/CMakeFiles/rebuild_cache.dir
