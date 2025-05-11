@@ -79,3 +79,4 @@ CMakeLists.txt.user*
 .pch/
 .rcc/
 .uic/
+aws_setup.txt

@@ -517,6 +517,10 @@ CMakeFiles/Weld_presentation_Qt5_project.dir/Weld_presentation_Qt5_project_autog
   /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtGui/qguiapplication.h \
   /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtGui/qinputmethod.h \
   /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtGui/qguiapplication_platform.h \
+  /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/QProcess \
+  /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qprocess.h \
+  /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/QTimer \
+  /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qtimer.h \
   /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qtmochelpers.h \
   /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qtmocconstants.h \
   /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/q20algorithm.h \

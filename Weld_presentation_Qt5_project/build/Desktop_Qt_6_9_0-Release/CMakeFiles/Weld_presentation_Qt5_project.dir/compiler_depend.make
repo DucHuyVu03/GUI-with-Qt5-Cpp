@@ -532,6 +532,10 @@ CMakeFiles/Weld_presentation_Qt5_project.dir/Weld_presentation_Qt5_project_autog
   /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtGui/qguiapplication.h \
   /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtGui/qinputmethod.h \
   /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtGui/qguiapplication_platform.h \
+  /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/QProcess \
+  /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qprocess.h \
+  /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/QTimer \
+  /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qtimer.h \
   /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qtmochelpers.h \
   /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qtmocconstants.h \
   /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/q20algorithm.h \
@@ -1067,6 +1071,10 @@ CMakeFiles/Weld_presentation_Qt5_project.dir/main.cpp.o: ../../main.cpp \
   /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtGui/qguiapplication.h \
   /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtGui/qinputmethod.h \
   /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtGui/qguiapplication_platform.h \
+  /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/QProcess \
+  /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qprocess.h \
+  /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/QTimer \
+  /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qtimer.h \
   /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtWidgets/QApplication \
   /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtWidgets/qapplication.h
 
@@ -1600,6 +1608,10 @@ CMakeFiles/Weld_presentation_Qt5_project.dir/mainwindow.cpp.o: ../../mainwindow.
   /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtGui/qguiapplication.h \
   /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtGui/qinputmethod.h \
   /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtGui/qguiapplication_platform.h \
+  /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/QProcess \
+  /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qprocess.h \
+  /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/QTimer \
+  /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qtimer.h \
   Weld_presentation_Qt5_project_autogen/include/ui_mainwindow.h \
   /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/QVariant \
   /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtWidgets/QApplication \
@@ -1639,6 +1651,10 @@ CMakeFiles/Weld_presentation_Qt5_project.dir/mainwindow.cpp.o: ../../mainwindow.
 /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtGui/qpicture.h:
 
 /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtWidgets/qlabel.h:
+
+/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/QVariant:
+
+/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtWidgets/qapplication.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
 
@@ -1686,13 +1702,9 @@ CMakeFiles/Weld_presentation_Qt5_project.dir/mainwindow.cpp.o: ../../mainwindow.
 
 /usr/include/alloca.h:
 
-/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qtmetamacros.h:
-
 /usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
 /include/c++/11/bits/basic_string.h:
-
-/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/QVariant:
 
 /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtWidgets/qwidget.h:
 
@@ -1991,6 +2003,10 @@ CMakeFiles/Weld_presentation_Qt5_project.dir/mainwindow.cpp.o: ../../mainwindow.
 /include/c++/11/bits/specfun.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
+
+Weld_presentation_Qt5_project_autogen/include/ui_mainwindow.h:
+
+/include/c++/11/type_traits:
 
 /include/c++/11/bits/range_access.h:
 
@@ -2404,6 +2420,10 @@ Weld_presentation_Qt5_project_autogen/EWIEGA46WW/moc_mainwindow.cpp:
 
 /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtGui/qcolor.h:
 
+/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qtmetamacros.h:
+
+/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/QTimer:
+
 /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qelapsedtimer.h:
 
 /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/q20memory.h:
@@ -2445,8 +2465,6 @@ Weld_presentation_Qt5_project_autogen/EWIEGA46WW/moc_mainwindow.cpp:
 /include/c++/11/iomanip:
 
 /include/c++/11/numeric:
-
-/include/c++/11/bits/stl_numeric.h:
 
 /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qiterator.h:
 
@@ -2543,10 +2561,6 @@ Weld_presentation_Qt5_project_autogen/mocs_compilation.cpp:
 /usr/include/x86_64-linux-gnu/bits/locale.h:
 
 /usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
-
-/include/c++/11/type_traits:
-
-Weld_presentation_Qt5_project_autogen/include/ui_mainwindow.h:
 
 /usr/include/x86_64-linux-gnu/bits/local_lim.h:
 
@@ -2724,6 +2738,14 @@ Weld_presentation_Qt5_project_autogen/include/ui_mainwindow.h:
 
 /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtGui/qscreen_platform.h:
 
+/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/QProcess:
+
+/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qprocess.h:
+
+/include/c++/11/bits/stl_numeric.h:
+
+/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qtimer.h:
+
 /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qconfig.h:
 
 /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qtmochelpers.h:
@@ -2733,5 +2755,3 @@ Weld_presentation_Qt5_project_autogen/include/ui_mainwindow.h:
 /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qtmocconstants.h:
 
 /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtWidgets/QApplication:
-
-/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtWidgets/qapplication.h:

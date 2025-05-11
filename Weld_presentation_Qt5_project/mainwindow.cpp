@@ -2,10 +2,9 @@
 #include "./ui_mainwindow.h"
 
 QString getDataFolderPath() {
-    QString sourcePath = QString(__FILE__);  // Path to mainwindow.cpp
-    QDir dir = QFileInfo(sourcePath).dir();  // Get directory of mainwindow.cpp
-    return dir.filePath("data");             // Append "data" folder
+    return QCoreApplication::applicationDirPath() + "/data";
 }
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -24,8 +23,7 @@ MainWindow::MainWindow(QWidget *parent)
                                 "}").arg(backgroundPath));
     //========== Folder ================================
     //Get the "data" folder
-    // QString dataContainingFolder = getDataFolderPath();
-    QString dataContainingFolder = QCoreApplication::applicationDirPath() + "/data";
+    QString dataContainingFolder = getDataFolderPath();
     qDebug()  << dataContainingFolder;
     QDir dir(dataContainingFolder);
 
@@ -47,13 +45,19 @@ MainWindow::MainWindow(QWidget *parent)
     }
     //========================================================================
 
-    //======== Refresh timer ===================
+    //======== Folder refresh timer ===================
     folderWatcher = new QFileSystemWatcher(this);
     QString dataPath = getDataFolderPath();
     folderWatcher->addPath(dataPath);
     //========================================================================
 
-    //Connection
+    //================== S3 sync timer ============================
+    QTimer *syncTimer = new QTimer(this);
+    connect(syncTimer, &QTimer::timeout, this, &MainWindow::sync_data_S3_to_local);
+    syncTimer->start(1000);  // Every 1 second
+    //================== S3 sync timer ============================
+
+    //Connections
     connect(ui->weldImageList, &QListWidget::itemClicked,
             this, &MainWindow::on_fileItem_clicked);
 
@@ -84,7 +88,7 @@ void MainWindow::on_searchButton_clicked()
 
     QDir dir(dataPath);
     QStringList nameFilters;
-    nameFilters << "*.jpg" << "*.JPG";
+    nameFilters << "*.jpg" << "*.JPG"<< "*.jpeg" << "*.JPEG";
 
     QFileInfoList allFiles = dir.entryInfoList(nameFilters, QDir::Files | QDir::NoDotAndDotDot);
 
@@ -147,4 +151,31 @@ void MainWindow::update_file_list() {
     for (const QFileInfo &file : allFiles) {
         ui->weldImageList->addItem(file.fileName());
     }
+}
+void MainWindow::sync_data_S3_to_local() {
+    QString folderPath = QCoreApplication::applicationDirPath() + "/data";
+    QString s3Bucket = "s3://imageweld/results/";
+
+    QStringList args;
+    args << "s3" << "sync" << s3Bucket << folderPath;
+
+    QProcess *process = new QProcess(this);
+
+    // Stop and delete the process when it finishes
+    connect(process, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
+            process, &QObject::deleteLater);
+
+    // Optional: capture stdout and stderr for debugging
+    connect(process, &QProcess::readyReadStandardOutput, [process]() {
+        qDebug() << process->readAllStandardOutput();
+    });
+    connect(process, &QProcess::readyReadStandardError, [process]() {
+        qDebug() << process->readAllStandardError();
+    });
+
+    // Register the process to be killed when app closes
+    connect(qApp, &QCoreApplication::aboutToQuit, process, &QProcess::kill);
+
+    qDebug() << "Executing: aws" << args;
+    process->start("aws", args);
 }

@@ -10,6 +10,9 @@
 #include <QListWidgetItem>
 #include <QFileSystemWatcher>
 #include <QScreen>
+#include <QProcess>
+#include <QTimer>
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -33,5 +36,6 @@ private:
     Ui::MainWindow *ui;
     QFileSystemWatcher *folderWatcher;
     void update_file_list();  // reuse for both startup and refresh
+    void sync_data_S3_to_local();
 };
 #endif // MAINWINDOW_H

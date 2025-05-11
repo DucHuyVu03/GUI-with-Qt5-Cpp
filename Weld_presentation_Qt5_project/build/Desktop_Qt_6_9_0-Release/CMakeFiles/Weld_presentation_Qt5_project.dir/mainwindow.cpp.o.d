@@ -516,6 +516,10 @@ CMakeFiles/Weld_presentation_Qt5_project.dir/mainwindow.cpp.o: \
   /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtGui/qguiapplication.h \
   /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtGui/qinputmethod.h \
   /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtGui/qguiapplication_platform.h \
+  /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/QProcess \
+  /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qprocess.h \
+  /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/QTimer \
+  /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qtimer.h \
   /home/squanchiwini/Desktop/sandboxes/GUI-with-Qt5-Cpp/Weld_presentation_Qt5_project/build/Desktop_Qt_6_9_0-Release/Weld_presentation_Qt5_project_autogen/include/./ui_mainwindow.h \
   /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/QVariant \
   /home/squanchiwini/Qt/6.9.0/gcc_64/include/QtWidgets/QApplication \

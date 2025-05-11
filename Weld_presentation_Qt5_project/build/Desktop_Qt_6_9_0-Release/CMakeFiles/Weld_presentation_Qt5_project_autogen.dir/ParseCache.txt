@@ -9,10 +9,12 @@
  mdp:/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/QFileSystemWatcher
  mdp:/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/QList
  mdp:/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/QObject
+ mdp:/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/QProcess
  mdp:/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/QRect
  mdp:/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/QSize
  mdp:/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/QSizeF
  mdp:/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/QString
+ mdp:/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/QTimer
  mdp:/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/q17memory.h
  mdp:/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/q20functional.h
  mdp:/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/q20iterator.h
@@ -104,6 +106,7 @@
  mdp:/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qoverload.h
  mdp:/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qpair.h
  mdp:/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qpoint.h
+ mdp:/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qprocess.h
  mdp:/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qprocessordetection.h
  mdp:/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qrect.h
  mdp:/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qrefcount.h
@@ -144,6 +147,7 @@
  mdp:/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qtenvironmentvariables.h
  mdp:/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qtextstream.h
  mdp:/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qtformat_impl.h
+ mdp:/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qtimer.h
  mdp:/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qtimezone.h
  mdp:/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qtmetamacros.h
  mdp:/home/squanchiwini/Qt/6.9.0/gcc_64/include/QtCore/qtnoop.h
