@@ -24,7 +24,8 @@ MainWindow::MainWindow(QWidget *parent)
                                 "}").arg(backgroundPath));
     //========== Folder ================================
     //Get the "data" folder
-    QString dataContainingFolder = getDataFolderPath();
+    // QString dataContainingFolder = getDataFolderPath();
+    QString dataContainingFolder = QCoreApplication::applicationDirPath() + "/data";
     qDebug()  << dataContainingFolder;
     QDir dir(dataContainingFolder);
 
