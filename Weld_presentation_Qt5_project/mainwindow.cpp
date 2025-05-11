@@ -67,6 +67,10 @@ MainWindow::MainWindow(QWidget *parent)
     connect(folderWatcher, &QFileSystemWatcher::directoryChanged,
             this, &MainWindow::update_file_list);
 
+    connect(ui->clearDataButton, &QPushButton::clicked,
+            this, &MainWindow::on_clearDataButton_clicked,
+            Qt::UniqueConnection);
+
     // Center the window within available screen space
     QScreen *screen = QGuiApplication::primaryScreen();
     QRect availableGeometry = screen->availableGeometry();
@@ -88,19 +92,30 @@ void MainWindow::on_searchButton_clicked()
 
     QDir dir(dataPath);
     QStringList nameFilters;
-    nameFilters << "*.jpg" << "*.JPG"<< "*.jpeg" << "*.JPEG";
+    nameFilters << "*.jpg" << "*.JPG" << "*.jpeg" << "*.JPEG";
 
     QFileInfoList allFiles = dir.entryInfoList(nameFilters, QDir::Files | QDir::NoDotAndDotDot);
 
-    ui->weldImageList->clear();
-
+    // Filter matching files
+    QFileInfoList matchedFiles;
     for (const QFileInfo &file : allFiles) {
         if (file.fileName().contains(searchText, Qt::CaseInsensitive)) {
-            ui->weldImageList->addItem(file.fileName());
+            matchedFiles.append(file);
         }
     }
 
-    if (ui->weldImageList->count() == 0) {
+    // Sort newest first
+    std::sort(matchedFiles.begin(), matchedFiles.end(), [](const QFileInfo &a, const QFileInfo &b) {
+        return a.lastModified() > b.lastModified();
+    });
+
+    ui->weldImageList->clear();
+
+    for (const QFileInfo &file : matchedFiles) {
+        ui->weldImageList->addItem(file.fileName());
+    }
+
+    if (matchedFiles.isEmpty()) {
         ui->weldImageList->addItem("(No matches found)");
     }
 }
@@ -117,10 +132,29 @@ void MainWindow::on_fileItem_clicked(QListWidgetItem *item) {
         return;
     }
 
-    ui->weldImageLabel->setPixmap(image);
+    // Scale 2× first
+    QSize doubleSize = image.size() * 2;
+
+    // Get QLabel size
+    QSize labelSize = ui->weldImageLabel->size();
+
+    // Determine final size: use 2× if it fits, otherwise fit to label
+    QSize finalSize;
+    if (doubleSize.width() <= labelSize.width() && doubleSize.height() <= labelSize.height()) {
+        finalSize = doubleSize;
+    } else {
+        finalSize = labelSize;
+    }
+
+    QPixmap scaledImage = image.scaled(finalSize, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+
+    // Display
+    ui->weldImageLabel->setAlignment(Qt::AlignCenter);
+    ui->weldImageLabel->setPixmap(scaledImage);
+
     //Get the .txt file content corresponding to the name of the .jpg file
     QString baseName = QFileInfo(fileName).completeBaseName();  // "cat.jpg" -> "cat"
-    QString textPath = getDataFolderPath() + "/" + baseName + ".txt";
+    QString textPath = getDataFolderPath() + "/" + baseName+ ".jpg" + ".txt";
     load_text_from_file(textPath);
 }
 
@@ -146,12 +180,18 @@ void MainWindow::update_file_list() {
 
     QFileInfoList allFiles = dir.entryInfoList(nameFilters, QDir::Files | QDir::NoDotAndDotDot);
 
+    // Sort newest first
+    std::sort(allFiles.begin(), allFiles.end(), [](const QFileInfo &a, const QFileInfo &b) {
+        return a.lastModified() > b.lastModified(); // descending
+    });
+
     ui->weldImageList->clear();
 
     for (const QFileInfo &file : allFiles) {
         ui->weldImageList->addItem(file.fileName());
     }
 }
+
 void MainWindow::sync_data_S3_to_local() {
     QString folderPath = QCoreApplication::applicationDirPath() + "/data";
     QString s3Bucket = "s3://imageweld/results/";
@@ -178,4 +218,33 @@ void MainWindow::sync_data_S3_to_local() {
 
     qDebug() << "Executing: aws" << args;
     process->start("aws", args);
+}
+
+void MainWindow::on_clearDataButton_clicked() {
+    QString folderPath = getDataFolderPath();
+    QDir dir(folderPath);
+
+    if (!dir.exists()) {
+        QMessageBox::information(this, "Info", "Data folder does not exist.");
+        return;
+    }
+
+    // Confirm with the user
+    QMessageBox::StandardButton reply;
+    reply = QMessageBox::question(this, "Confirm Deletion",
+                                  "Are you sure you want to delete all files in the data folder?",
+                                  QMessageBox::Yes | QMessageBox::No);
+    if (reply != QMessageBox::Yes)
+        return;
+    QStringList filters = {"*.jpg", "*.jpeg", "*.txt", "*.png"};  // Add more if needed
+    QFileInfoList fileList = dir.entryInfoList(filters, QDir::Files);
+
+    int deletedCount = 0;
+    for (const QFileInfo &fileInfo : fileList) {
+        QFile::remove(fileInfo.absoluteFilePath());
+        ++deletedCount;
+    }
+
+    update_file_list(); // Refresh the UI list
+    QMessageBox::information(this, "Done", QString("Deleted %1 file(s).").arg(deletedCount));
 }

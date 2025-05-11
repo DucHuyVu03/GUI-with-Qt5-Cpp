@@ -29,6 +29,7 @@ public:
 
 private slots:
     void on_searchButton_clicked();
+    void on_clearDataButton_clicked();
     void on_fileItem_clicked(QListWidgetItem *item);
     void load_text_from_file(const QString &filePath);
 

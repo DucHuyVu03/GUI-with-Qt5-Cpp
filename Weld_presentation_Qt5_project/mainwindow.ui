@@ -48,9 +48,9 @@
    <widget class="QLineEdit" name="weldSearchTypeBox">
     <property name="geometry">
      <rect>
-      <x>1440</x>
-      <y>70</y>
-      <width>341</width>
+      <x>1460</x>
+      <y>60</y>
+      <width>361</width>
       <height>61</height>
      </rect>
     </property>
@@ -72,15 +72,15 @@ color: black;</string>
      <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
     <property name="placeholderText">
-     <string>Nhập MSSV để và ấn search...</string>
+     <string>Type your student ID...</string>
     </property>
    </widget>
    <widget class="QPushButton" name="searchButton">
     <property name="geometry">
      <rect>
-      <x>1440</x>
-      <y>140</y>
-      <width>341</width>
+      <x>1460</x>
+      <y>130</y>
+      <width>361</width>
       <height>41</height>
      </rect>
     </property>
@@ -94,10 +94,10 @@ color: black;</string>
    <widget class="QListWidget" name="weldImageList">
     <property name="geometry">
      <rect>
-      <x>1440</x>
-      <y>190</y>
-      <width>341</width>
-      <height>751</height>
+      <x>1460</x>
+      <y>180</y>
+      <width>361</width>
+      <height>681</height>
      </rect>
     </property>
     <property name="font">
@@ -119,11 +119,17 @@ color: black;</string>
    <widget class="QLabel" name="weldImageLabel">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>70</y>
-      <width>1246</width>
-      <height>364</height>
+      <x>40</x>
+      <y>60</y>
+      <width>1381</width>
+      <height>311</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: #cbc9cb;
@@ -136,7 +142,7 @@ padding: 0px;</string>
      <string>Image here</string>
     </property>
     <property name="scaledContents">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
     <property name="alignment">
      <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -145,10 +151,10 @@ padding: 0px;</string>
    <widget class="QLabel" name="classNCommentLabel">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>490</y>
-      <width>1251</width>
-      <height>451</height>
+      <x>40</x>
+      <y>390</y>
+      <width>1381</width>
+      <height>471</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -177,6 +183,22 @@ padding: 30px;</string>
     </property>
     <property name="wordWrap">
      <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="clearDataButton">
+    <property name="geometry">
+     <rect>
+      <x>1460</x>
+      <y>870</y>
+      <width>361</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Delete all</string>
     </property>
    </widget>
   </widget>
